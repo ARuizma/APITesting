@@ -1,8 +1,6 @@
-package org.example;
+package ApiTesting.StandardAPI;
 
 import io.restassured.path.json.JsonPath;
-
-import java.sql.SQLOutput;
 
 public class ComplexJsonParse {
     public static void main(String[] args) {

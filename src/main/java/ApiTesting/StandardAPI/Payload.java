@@ -1,4 +1,4 @@
-package org.example;
+package ApiTesting.StandardAPI;
 
 public class Payload {
     public static String AddPlace() {
@@ -17,6 +17,14 @@ public class Payload {
                 "  ],\n" +
                 "  \"website\": \"https://rahulshettyacademy.com\",\n" +
                 "  \"language\": \"French-IN\"\n" +
+                "}";
+    }
+
+    public static String UpdatePlace(String placeID, String newAddress) {
+        return "{\n" +
+                "\"place_id\":\""+placeID+"\",\n" +
+                "\"address\":\""+newAddress+"\",\n" +
+                "\"key\":\"qaclick123\"\n" +
                 "}";
     }
 
@@ -48,6 +56,15 @@ public class Payload {
                 "\t\t\t\"copies\": 7\n" +
                 "\t\t}\n" +
                 "\t]\n" +
+                "}";
+    }
+
+    public static String Addbook(String isbn, String aisle){
+        return "{\n" +
+                "\"name\":\"Learn Appium Automation with Java\",\n" +
+                "\"isbn\":\""+isbn+"\",\n" +
+                "\"aisle\":\""+aisle+"\",\n" +
+                "\"author\":\"John foer\"\n" +
                 "}";
     }
 }
