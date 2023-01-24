@@ -1,10 +1,12 @@
 package org.example.ApiTesting.OAuth20;
 
-import ApiTesting.Pojo.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import org.example.ApiTesting.Pojo.GetCourse;
+import org.example.ApiTesting.Pojo.WebAutomation;
+import org.example.ApiTesting.Pojo.api;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;

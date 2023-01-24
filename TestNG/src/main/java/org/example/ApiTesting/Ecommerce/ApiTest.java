@@ -1,13 +1,14 @@
 package org.example.ApiTesting.Ecommerce;
 
-import ApiTesting.Pojo.LoginRequest;
-import ApiTesting.Pojo.LoginResponse;
-import ApiTesting.Pojo.OrderDetail;
-import ApiTesting.Pojo.Orders;
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
+import org.example.ApiTesting.Pojo.LoginRequest;
+import org.example.ApiTesting.Pojo.LoginResponse;
+import org.example.ApiTesting.Pojo.OrderDetail;
+import org.example.ApiTesting.Pojo.Orders;
 import org.openqa.selenium.json.Json;
 import org.testng.Assert;
 

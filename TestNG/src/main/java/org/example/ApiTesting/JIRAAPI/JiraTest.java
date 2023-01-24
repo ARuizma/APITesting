@@ -1,8 +1,9 @@
 package org.example.ApiTesting.JIRAAPI;
-import ApiTesting.StandardAPI.*;
+
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
+import org.example.ApiTesting.StandardAPI.ReusableMethods;
 import org.testng.Assert;
 
 import java.io.File;

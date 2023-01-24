@@ -1,5 +1,6 @@
 package org.example.ApiTesting.Pojo;
 
+
 public class GetCourse {
 
     private String url;
@@ -33,11 +34,11 @@ public class GetCourse {
         this.expertise = expertise;
     }
 
-    public ApiTesting.Pojo.Courses getCourses() {
+    public org.example.ApiTesting.Pojo.Courses getCourses() {
         return Courses;
     }
 
-    public void setCourses(ApiTesting.Pojo.Courses courses) {
+    public void setCourses(org.example.ApiTesting.Pojo.Courses courses) {
         Courses = courses;
     }
 
