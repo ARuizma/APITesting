@@ -1,0 +1,47 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 50,
+    "name": "otherthing",
+    "phone_number": "2222222",
+    "address": "otherstreet",
+    "website": "https://rahulshettyacademy.com",
+    "language": "English",
+    "location": {
+        "lat": -3.87454,
+        "lng": 35.4778
+    },
+    "types": [
+        "shoe park",
+        "park"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Tue, 24 Jan 2023 08:59:48 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "6254e50442aa74301b749f55c3b9679b",
+    "scope": "APP",
+    "reference": "903ddf8e129297f2fb014b9f8606cebb903ddf8e129297f2fb014b9f8606cebb",
+    "id": "903ddf8e129297f2fb014b9f8606cebb"
+}

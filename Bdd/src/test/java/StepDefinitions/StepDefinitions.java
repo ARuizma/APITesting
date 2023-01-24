@@ -18,6 +18,8 @@ import org.testng.annotations.Test;
 import resources.TestDataBuild;
 import resources.utils;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,17 +33,17 @@ public class StepDefinitions extends utils {
     Response response;
     TestDataBuild data = new TestDataBuild();
 
-    @Given("user adds place payload")
-    public void add_place_payload(){
+    @Given("user adds place payload with {string} {string} {string}")
+    public void add_place_payload(String name, String language, String address) throws IOException {
 
-        resp = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-
-        res = given().spec(requestSpecification()).body(data.addPlacePayload());
+        res = given().spec(requestSpecification()).body(data.addPlacePayload(name, language, address));
 
     }
 
     @When("user calls {string} with Post request")
     public void call_request(String path){
+        resp = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+
         response = res.when().post("maps/api/place/add/json")
                 .then().spec(resp).extract().response();
     }
