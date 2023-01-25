@@ -18,14 +18,14 @@ public class dataDriven {
     //once column is identified scan to identify purchase row
     //pull purchase data and feed it into test
 
-    public ArrayList<String> getData(String testcasename) throws IOException {
+    public ArrayList<String> getData(String sheetname, String testcasename) throws IOException {
         ArrayList<String> arr = new ArrayList<String>();
         FileInputStream file = new FileInputStream("C:\\Users\\ARuizMarin\\Documents\\Udemy\\ApiTesting\\ApiTest.xlsx");
         XSSFWorkbook workbook = new XSSFWorkbook(file);
 
         int sheets = workbook.getNumberOfSheets();
         for(int i=0;i<sheets;i++) {
-            if (workbook.getSheetName(i).equalsIgnoreCase("testdata")) {
+            if (workbook.getSheetName(i).equalsIgnoreCase(sheetname)) {
                 XSSFSheet sheet = workbook.getSheetAt(i);
                 Iterator<Row> rows = sheet.iterator();
                 Row firstrow = rows.next();

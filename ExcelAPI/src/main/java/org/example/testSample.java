@@ -7,7 +7,7 @@ public class testSample {
     public static void main(String[] args) throws IOException {
 
         dataDriven d=new dataDriven();
-        ArrayList<String> data =  d.getData("Add Profile");
+        ArrayList<String> data =  d.getData("testdata","Add Profile");
 
         System.out.println(data.get(0));
         System.out.println(data.get(1));

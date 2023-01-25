@@ -2,9 +2,12 @@ package org.example.ApiTesting.StandardAPI;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import org.example.dataDriven;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
@@ -12,13 +15,16 @@ import static io.restassured.RestAssured.given;
 public class ExcelDriven {
 
     @Test//(dataProvider = "BooksData")
-    public void addBook() {
+    public void addBook() throws IOException {
+
+        dataDriven d=new dataDriven();
+        ArrayList<String> data= d.getData("sample","RestAddBook");
 
         HashMap<String, Object> map = new HashMap<>();
-        map.put("name","RestAssured");
-        map.put("isbn","asdf");
-        map.put("aisle","459");
-        map.put("author","Myself");
+        map.put("name",data.get(1));
+        map.put("isbn",data.get(2));
+        map.put("aisle",data.get(3));
+        map.put("author",data.get(4));
 
         /*HashMap<String, Object> map2 = new HashMap<>();
         map2.put("lat","-34.25858");
